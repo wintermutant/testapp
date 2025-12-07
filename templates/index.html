@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .greeting {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Hello App</h1>
+
+    {% if greeting %}
+    <div class="greeting">{{ greeting }}</div>
+    {% endif %}
+
+    <form method="POST">
+        <div>
+            <input type="text" name="name" placeholder="Enter your name" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
